@@ -1,0 +1,20 @@
+{
+  "name": "phash-test",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@canvas/image": "^1.0.1",
+    "axios": "^0.26.1",
+    "blockhash-core": "^0.1.0"
+  },
+  "devDependencies": {
+    "@types/node": "^17.0.21"
+  }
+}
