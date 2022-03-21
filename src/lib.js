@@ -24,7 +24,7 @@ class HashImage {
   }
 
   static hashCompare(hash1, hash2) {
-    if (!(hash1 instanceof String) || !(hash2 instanceof String)) {
+    if (typeof hash1 !== "string" || typeof hash2 !== "string") {
       throw new Error("Both hash values need to be strings");
     }
     let similarity = 0;
