@@ -1,14 +1,16 @@
 {
-  "name": "phash-test",
-  "version": "1.0.0",
+  "name": "image-phash",
+  "version": "0.1.0",
   "description": "",
-  "main": "index.js",
-  "scripts": {
-    "start": "node index.js"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "main": "./src/lib.js",
+  "keywords": [
+    "javascript",
+    "phash",
+    "hashing",
+    "images"
+  ],
+  "author": "Victor Martinez <jaster.victor@gmail.com>",
+  "license": "MIT",
   "dependencies": {
     "@canvas/image": "^1.0.1",
     "axios": "^0.26.1",
@@ -16,5 +18,13 @@
   },
   "devDependencies": {
     "@types/node": "^17.0.21"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JasterV/hash-image.git"
+  },
+  "bugs": {
+    "url": "https://github.com/JasterV/hash-image/issues"
+  },
+  "homepage": "https://github.com/JasterV/hash-image#readme"
 }

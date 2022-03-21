@@ -1,13 +1,6 @@
-const blockhash = require("blockhash-core");
-const { getImageData, imageFromBuffer } = require("@canvas/image");
-const axios = require("axios").default;
+const { default: axios } = require("axios");
 
-async function hash(buffer) {
-  const image = await imageFromBuffer(buffer);
-  const hash = await blockhash.bmvbhash(getImageData(image), 8);
-  return hexToBin(hash);
-}
-
+// Utils
 async function download(url) {
   const response = await axios.get(url, { responseType: "stream" });
   const stream = response.data;
@@ -19,7 +12,7 @@ async function download(url) {
   return buffer;
 }
 
-function calculateSimilarity(hash1, hash2) {
+function calculateHashSimilarity(hash1, hash2) {
   let similarity = 0;
   const hash1Array = hash1.split("");
   hash1Array.forEach((bit, index) => {
@@ -61,7 +54,7 @@ function hexToBin(hexString) {
 }
 
 module.exports = {
-  hash,
   download,
-  calculateSimilarity,
+  hexToBin,
+  calculateHashSimilarity,
 };
