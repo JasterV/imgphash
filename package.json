@@ -11,13 +11,18 @@
   ],
   "author": "Victor Martinez <jaster.victor@gmail.com>",
   "license": "MIT",
+  "scripts": {
+    "test": "jest"
+  },
   "dependencies": {
     "@canvas/image": "^1.0.1",
     "axios": "^0.26.1",
     "blockhash-core": "^0.1.0"
   },
   "devDependencies": {
-    "@types/node": "^17.0.21"
+    "@types/jest": "^27.4.1",
+    "@types/node": "^17.0.21",
+    "jest": "^27.5.1"
   },
   "repository": {
     "type": "git",

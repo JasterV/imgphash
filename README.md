@@ -1,6 +1,6 @@
 <h1 align="center">Welcome to imgphash 👋</h1>
 <p>
-  <img alt="Version" src="https://img.shields.io/badge/version-0.1.0-blue.svg?cacheSeconds=2592000" />
+  <img alt="Version" src="https://img.shields.io/badge/version-0.2.0-blue.svg?cacheSeconds=2592000" />
   <a href="https://github.com/JasterV/imgphash#readme" target="_blank">
     <img alt="Documentation" src="https://img.shields.io/badge/documentation-yes-brightgreen.svg" />
   </a>
@@ -43,10 +43,12 @@ const image = new HashImage(buffer)
 ```javascript
 const image1 = await HashImage.fromUrl(url1);
 const image2 = await HashImage.fromUrl(url2);
-const hash1 = await image1.hash()
+const hash1 = await image1.hash() // PHash instance
 const hash2 = await image2.hash()
-const similarity = HashImage.hashCompare(hash1, hash2)
+const similarity = hash1.compare(hash2)
 ```
+
+> The hash function returns an instance of `PHash`
 
 + Or just compare 2 image objects, this is going to internally calculate their hash and use it
 
@@ -77,7 +79,7 @@ Give a ⭐️ if this project helped you!
 ## 📝 License
 
 Copyright © 2022 [Victor Martinez <jaster.victor@gmail.com>](https://github.com/JasterV).<br />
-This project is [MIT](https://choosealicense.com/licenses/mit/) licensed.
+This project is [MIT](https://github.com/JasterV/imgphash/blob/main/LICENSE) licensed.
 
 ***
 _This README was generated with ❤️ by [readme-md-generator](https://github.com/kefranabg/readme-md-generator)_
