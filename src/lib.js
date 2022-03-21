@@ -13,11 +13,20 @@ class HashImage {
   }
 
   static async fromUrl(url) {
-    const buffer = await download(url);
-    return new HashImage(buffer);
+    try {
+      const buffer = await download(url);
+      return new HashImage(buffer);
+    } catch (err) {
+      throw new Error(
+        "Error on image download, make sure you are passing a valid string url"
+      );
+    }
   }
 
   static hashCompare(hash1, hash2) {
+    if (!(hash1 instanceof String) || !(hash2 instanceof String)) {
+      throw new Error("Both hash values need to be strings");
+    }
     let similarity = 0;
     const hash1Array = hash1.split("");
     hash1Array.forEach((bit, index) => {
@@ -34,6 +43,9 @@ class HashImage {
   }
 
   async compare(other) {
+    if (!(other instanceof HashImage)) {
+      throw new Error("Can't compare with a non HashImage value");
+    }
     const hash1 = await this.hash();
     const hash2 = await other.hash();
     return HashImage.hashCompare(hash1, hash2);
