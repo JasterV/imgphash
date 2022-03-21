@@ -22,6 +22,43 @@
 npm i imgphash
 ```
 
+## Use
+
+This module provides a class `HashImage` that you can use to hash an image and compare it
+
++ Create a `HashImage` from a url
+
+```javascript
+const image = await HashImage.fromUrl(url1)
+```
+
++ Create a `HashImage` from a Node buffer
+
+```javascript
+const image = new HashImage(buffer)
+```
+
++ Get the hash of 2 images and compare them
+
+```javascript
+const image1 = await HashImage.fromUrl(url1);
+const image2 = await HashImage.fromUrl(url2);
+const hash1 = await image1.hash()
+const hash2 = await image2.hash()
+const similarity = HashImage.hashCompare(hash1, hash2)
+```
+
++ Or just compare 2 image objects, this is going to internally calculate their hash and use it
+
+```javascript
+const image1 = await HashImage.fromUrl(url1);
+const image2 = await HashImage.fromUrl(url2);
+const similarity = await image1.compare(image2);
+```
+
+> All the comparisons return a value between 0 and 1.
+> 0 meaning that the images are completely different and 1 meaning they are exactly the same image
+
 ## Author
 
 👤 **Victor Martinez <jaster.victor@gmail.com>**
