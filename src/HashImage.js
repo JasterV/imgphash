@@ -24,7 +24,7 @@ class HashImage {
     }
   }
 
-  async hash() {
+  async phash() {
     const data = await imageFromBuffer(this.buffer);
     const hexHash = await blockhash.bmvbhash(getImageData(data), 8);
     const hash = hexToBin(hexHash);
@@ -35,8 +35,8 @@ class HashImage {
     if (!(other instanceof HashImage)) {
       throw new Error("Can't compare with a non HashImage value");
     }
-    const hash1 = await this.hash();
-    const hash2 = await other.hash();
+    const hash1 = await this.phash();
+    const hash2 = await other.phash();
     return hash1.compare(hash2);
   }
 }

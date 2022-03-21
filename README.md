@@ -43,8 +43,8 @@ const image = new HashImage(buffer)
 ```javascript
 const image1 = await HashImage.fromUrl(url1);
 const image2 = await HashImage.fromUrl(url2);
-const hash1 = await image1.hash() // PHash instance
-const hash2 = await image2.hash()
+const hash1 = await image1.phash() // PHash instance
+const hash2 = await image2.phash()
 const similarity = hash1.compare(hash2)
 ```
 
