@@ -1,7 +1,7 @@
 {
   "name": "image-phash",
   "version": "0.1.0",
-  "description": "",
+  "description": "Provide an image class that is able to calculate similarity to other images using the phash value",
   "main": "./src/lib.js",
   "keywords": [
     "javascript",
