@@ -1,5 +1,5 @@
 {
-  "name": "phash-image",
+  "name": "imgphash",
   "version": "0.1.0",
   "description": "Provide an image class that is able to calculate similarity to other images using the phash value",
   "main": "./src/lib.js",
@@ -21,10 +21,10 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/JasterV/phash-image.git"
+    "url": "git+https://github.com/JasterV/imgphash.git"
   },
   "bugs": {
-    "url": "https://github.com/JasterV/phash-image/issues"
+    "url": "https://github.com/JasterV/imgphash/issues"
   },
-  "homepage": "https://github.com/JasterV/phash-image#readme"
+  "homepage": "https://github.com/JasterV/imgphash#readme"
 }

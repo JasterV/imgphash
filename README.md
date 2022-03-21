@@ -1,25 +1,25 @@
-<h1 align="center">Welcome to phash-image 👋</h1>
+<h1 align="center">Welcome to imgphash 👋</h1>
 <p>
   <img alt="Version" src="https://img.shields.io/badge/version-0.1.0-blue.svg?cacheSeconds=2592000" />
-  <a href="https://github.com/JasterV/phash-image#readme" target="_blank">
+  <a href="https://github.com/JasterV/imgphash#readme" target="_blank">
     <img alt="Documentation" src="https://img.shields.io/badge/documentation-yes-brightgreen.svg" />
   </a>
-  <a href="https://github.com/JasterV/phash-image/graphs/commit-activity" target="_blank">
+  <a href="https://github.com/JasterV/imgphash/graphs/commit-activity" target="_blank">
     <img alt="Maintenance" src="https://img.shields.io/badge/Maintained%3F-yes-green.svg" />
   </a>
-  <a href="https://github.com/JasterV/phash-image/blob/main/LICENSE" target="_blank">
-    <img alt="License: MIT" src="https://img.shields.io/github/license/JasterV/phash-image" />
+  <a href="https://github.com/JasterV/imgphash/blob/main/LICENSE" target="_blank">
+    <img alt="License: MIT" src="https://img.shields.io/github/license/JasterV/imgphash" />
   </a>
 </p>
 
 > Provide an image class that is able to calculate similarity to other images using the phash value
 
-### 🏠 [Homepage](https://github.com/JasterV/phash-image#readme)
+### 🏠 [Homepage](https://github.com/JasterV/imgphash#readme)
 
 ## Install
 
 ```sh
-npm i phash-image
+npm i imgphash
 ```
 
 ## Author
@@ -31,7 +31,7 @@ npm i phash-image
 
 ## 🤝 Contributing
 
-Contributions, issues and feature requests are welcome!<br />Feel free to check [issues page](https://github.com/JasterV/phash-image/issues). 
+Contributions, issues and feature requests are welcome!<br />Feel free to check [issues page](https://github.com/JasterV/imgphash/issues). 
 
 ## Show your support
 
