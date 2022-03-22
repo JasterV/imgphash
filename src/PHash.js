@@ -14,7 +14,7 @@ class PHash {
         "Can't construct a PHash instance with a non-binary string value"
       );
     }
-    this.hash = hash;
+    this.hash = hash.trim();
   }
 
   compare(other) {
