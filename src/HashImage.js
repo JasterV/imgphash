@@ -1,9 +1,9 @@
-const { imageFromBuffer, getImageData } = require("@canvas/image");
-const PHash = require("./PHash");
-const { download, hexToBin } = require("./utils");
-const blockhash = require("blockhash-core");
+import { imageFromBuffer, getImageData } from "@canvas/image";
+import { PHash } from "./PHash.js";
+import { download, hexToBin } from "./utils/index.js";
+import blockhash from "blockhash-core";
 
-class HashImage {
+export class HashImage {
   constructor(buffer) {
     if (!(buffer instanceof Uint8Array)) {
       throw new Error(
@@ -40,5 +40,3 @@ class HashImage {
     return hash1.compare(hash2);
   }
 }
-
-module.exports = HashImage;

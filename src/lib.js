@@ -1,4 +1,4 @@
-const HashImage = require("./HashImage");
-const PHash = require("./PHash");
+import HashImage from "./HashImage.js";
+import PHash from "./PHash.js";
 
-module.exports = { HashImage, PHash };
+export default { HashImage, PHash };

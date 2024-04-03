@@ -1,5 +1,7 @@
-const HashImage = require("../src/HashImage");
-const PHash = require("../src/PHash");
+import  { HashImage } from "../src/HashImage.js";
+import { PHash } from "../src/PHash.js";
+
+import {expect} from 'expect';
 
 const url1 =
   "https://res.cloudinary.com/demo/image/upload/f_auto,q_auto/w_400/koala1.jpg";

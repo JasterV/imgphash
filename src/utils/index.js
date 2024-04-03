@@ -1,7 +1,7 @@
-const { default: axios } = require("axios");
+import axios from "axios"; 
 
 // Utils
-async function download(url) {
+export async function download(url) {
   const response = await axios.get(url, { responseType: "stream" });
   const stream = response.data;
   const chunks = [];
@@ -12,7 +12,7 @@ async function download(url) {
   return buffer;
 }
 
-function calculateHashSimilarity(hash1, hash2) {
+export function calculateHashSimilarity(hash1, hash2) {
   let similarity = 0;
   const hash1Array = hash1.split("");
   hash1Array.forEach((bit, index) => {
@@ -21,7 +21,7 @@ function calculateHashSimilarity(hash1, hash2) {
   return similarity / hash1.length;
 }
 
-function hexToBin(hexString) {
+export function hexToBin(hexString) {
   const hexBinLookup = {
     0: "0000",
     1: "0001",
@@ -52,9 +52,3 @@ function hexToBin(hexString) {
   }
   return result;
 }
-
-module.exports = {
-  download,
-  hexToBin,
-  calculateHashSimilarity,
-};
