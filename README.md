@@ -26,31 +26,31 @@ npm i imgphash
 
 This module provides a class `HashImage` that you can use to hash an image and compare it
 
-+ Create a `HashImage` from a url
+- Create a `HashImage` from a url
 
 ```javascript
-const image = await HashImage.fromUrl(url1)
+const image = await HashImage.fromUrl(url1);
 ```
 
-+ Create a `HashImage` from a Node buffer
+- Create a `HashImage` from a Node buffer
 
 ```javascript
-const image = new HashImage(buffer)
+const image = new HashImage(buffer);
 ```
 
-+ Get the hash of 2 images and compare them
+- Get the hash of 2 images and compare them
 
 ```javascript
 const image1 = await HashImage.fromUrl(url1);
 const image2 = await HashImage.fromUrl(url2);
-const hash1 = await image1.phash() // PHash instance
-const hash2 = await image2.phash()
-const similarity = hash1.compare(hash2)
+const hash1 = await image1.phash(); // PHash instance
+const hash2 = await image2.phash();
+const similarity = hash1.compare(hash2);
 ```
 
 > The hash function returns an instance of `PHash`
 
-+ Or just compare 2 image objects, this is going to internally calculate their hash and use it
+- Or just compare 2 image objects, this is going to internally calculate their hash and use it
 
 ```javascript
 const image1 = await HashImage.fromUrl(url1);
@@ -65,12 +65,12 @@ const similarity = await image1.compare(image2);
 
 👤 **Victor Martinez <jaster.victor@gmail.com>**
 
-* Website: https://jasterv.com
-* Github: [@JasterV](https://github.com/JasterV)
+- Website: https://jasterv.com
+- Github: [@JasterV](https://github.com/JasterV)
 
 ## 🤝 Contributing
 
-Contributions, issues and feature requests are welcome!<br />Feel free to check [issues page](https://github.com/JasterV/imgphash/issues). 
+Contributions, issues and feature requests are welcome!<br />Feel free to check [issues page](https://github.com/JasterV/imgphash/issues).
 
 ## Show your support
 
@@ -81,5 +81,6 @@ Give a ⭐️ if this project helped you!
 Copyright © 2022 [Victor Martinez <jaster.victor@gmail.com>](https://github.com/JasterV).<br />
 This project is [MIT](https://github.com/JasterV/imgphash/blob/main/LICENSE) licensed.
 
-***
+---
+
 _This README was generated with ❤️ by [readme-md-generator](https://github.com/kefranabg/readme-md-generator)_
