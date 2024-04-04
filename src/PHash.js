@@ -1,4 +1,4 @@
-class PHash {
+export class PHash {
   constructor(hash) {
     if (typeof hash !== "string") {
       throw new Error(
@@ -32,5 +32,3 @@ class PHash {
     return similarity / maxLength;
   }
 }
-
-module.exports = PHash;
