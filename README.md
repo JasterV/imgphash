@@ -65,9 +65,6 @@ const similarity = await image1.compare(image2);
 
 👤 **Victor Martinez <jaster.victor@gmail.com>**
 
-- Website: https://jasterv.com
-- Github: [@JasterV](https://github.com/JasterV)
-
 ## 🤝 Contributing
 
 Contributions, issues and feature requests are welcome!<br />Feel free to check [issues page](https://github.com/JasterV/imgphash/issues).
