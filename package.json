@@ -23,7 +23,6 @@
   },
   "devDependencies": {
     "@types/node": "^25.3.3",
-    "expect": "^30.2.0",
     "mocha": "^11.7.5",
     "prettier": "3.8.1"
   },
