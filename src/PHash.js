@@ -2,7 +2,7 @@ export class PHash {
   constructor(hash) {
     if (typeof hash !== "string") {
       throw new Error(
-        "Can't construct a PHash instance with a non-string value"
+        "Can't construct a PHash instance with a non-string value",
       );
     }
     const isNonBinary = hash
@@ -11,7 +11,7 @@ export class PHash {
       .some((chr) => chr !== "0" && chr !== "1");
     if (isNonBinary) {
       throw new Error(
-        "Can't construct a PHash instance with a non-binary string value"
+        "Can't construct a PHash instance with a non-binary string value",
       );
     }
     this.hash = hash.trim();
