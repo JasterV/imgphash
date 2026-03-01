@@ -4,6 +4,10 @@ on:
   release:
     types: [created]
 
+permissions:
+  id-token: write # Required for OIDC
+  contents: read
+
 jobs:
   release:
     runs-on: ubuntu-latest
@@ -22,8 +26,6 @@ jobs:
         run: bun test
 
       - name: Publish to NPM
-        # --access public is required for scoped packages (@your-org/pkg)
-        # --tolerate-republish prevents CI failure if the version already exists
-        run: bun publish --access public --tolerate-republish
+        run: bun publish --access public
         env:
           NPM_CONFIG_TOKEN: ${{ secrets.npm_token }}
