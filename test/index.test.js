@@ -28,7 +28,7 @@ describe("Test HashImage", () => {
   it("Can't create an instance from an invalid url", async () => {
     expect.assertions(1);
     await expect(HashImage.fromUrl("invalid-url")).rejects.toThrowError(
-      "Error on image download, make sure you are passing a valid string url"
+      "Error on image download, make sure you are passing a valid string url",
     );
   });
 
@@ -51,7 +51,7 @@ describe("Test HashImage", () => {
     expect.assertions(1);
     const image = new HashImage(testBuffer);
     await expect(image.compare("asdfsdf")).rejects.toThrowError(
-      "Can't compare with a non HashImage value"
+      "Can't compare with a non HashImage value",
     );
   });
 });
@@ -69,7 +69,7 @@ describe("Test PHash", () => {
       new PHash(2);
     } catch (err) {
       expect(err.message).toBe(
-        "Can't construct a PHash instance with a non-string value"
+        "Can't construct a PHash instance with a non-string value",
       );
     }
   });
@@ -80,7 +80,7 @@ describe("Test PHash", () => {
       new PHash("dfgdfg");
     } catch (err) {
       expect(err.message).toBe(
-        "Can't construct a PHash instance with a non-binary string value"
+        "Can't construct a PHash instance with a non-binary string value",
       );
     }
   });
